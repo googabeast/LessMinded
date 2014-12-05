@@ -1,0 +1,173 @@
+@import (reference) "lessMinded.less";
+@svg: "/images/svg/";
+
+@black:#000;			@white:#fff;
+@red:#990000;			@yellow:#e2ca35;
+@green:#36863c;			@lightGreen:#328738;
+@blue:#25246b;			@lightBlue:#dfeaff;
+@silver:#333;			@lightGrey:#ababab;		@middleGrey:#ccc;		@medGrey:#838383;		@darkGrey:#3d3d3d;
+@navText:#25236B;		@navGrey:#eee;	        @navLight:#bebebe;
+
+@img:"/static/img/";
+@svg:"/static/img/svg/";
+@icons:"/static/img/icons/";
+
+
+.left(@x){ .size(@x left); }
+.right(@x){ .size(@x right); }
+.center(@x) when (default(0)){ margin:@x auto; }
+.dropShadow(){ .box-shadow(5px 0px 5px 5px rgba(0,0,0,0.5)); }
+.dropShadowSoft(){ .box-shadow(0px 5px 5px 0px rgba(192,192,192,.8)); }
+.bottomFall(){ .pos(a); .place(n n 0); }
+.flip(){ .property(transform, rotate(180deg), ~"webkit moz o ms"); }
+.flipBack(){ .property(transform, rotate(360deg), ~"webkit moz o ms"); }
+// .box-sizing{ .property(box-sizing, ~"border-box", ~"webkit moz o ms"); }
+
+// .loop-test{
+// 	@index:16;
+// 	.mixin-loop(@index) when (@index > 0){
+// 		.do(@index) when (@index = 1){
+// 			@deg:0;
+// 			@sec:0.05;
+// 		}
+// 		.do(@index) when not (@index = 1){
+// 			@deg:(22.5 * (@index - 1));
+// 			@sec:round(0.05 + (0.05 * (@index - 1)), 2);
+// 		}
+// 		.do(@index);
+// 		.ajax-spinner-bars > .bar-@{index}{
+// 			.property(transform, rotate(~"@{deg}deg") translate(0, -12px), ~"webkit ms");
+// 			.property(animation-delay, ~"@{sec}s", ~"webkit");
+// 		}
+// 		.mixin-loop(@index - 1);
+// 	}
+// 	.mixin-loop(@index);
+// }
+
+
+// h3{ .titleLine(15px, #ccc, #fff); }
+// h3{ .titleLine(15px, #ccc, #fff, 15%); }
+// h3{ .titleLine(15px, #ccc, #fff, 15%, 1px); }
+// h3{ .titleLine(15px, #ccc, #fff, 15%, 1px, dashed); }
+// .fontPlay{ .txt(cap caps lower c l r j b u i s o); }
+// .position{ .pos(a); }
+
+
+// .myTest{ .bg(gradent, #fff #000); }
+// .myTest{ .bg(gradent, #fff #000, yes); }
+// .myTest{ .bg(gradent, x, #fff #000); }
+// .myTest{ .bg(gradent, y, #fff #000); }
+// .myTest{ .bg(gradent, no, #fff #000); }
+// .myTest{ .bg(gradent, no, #fff #000, yes); }
+// .myTest{ .rotate(180); }
+// .myTest{ .flip(); }
+// .myTest{ .border-radius(25px 25px 25px 25px); }
+// .myTest{ .box-shadow(1px 2px 3px 4px #fff); }
+// .myTest{ .inner-shadow(1px 2px 3px 4px #fff); }
+// .myTest{ .select(none); }
+// .myTest{ .select(#fff, #000); }
+// .myTest{ .vertical-div(); }
+
+// .bgTest{ .bg(url("@{svg}plusSignBlack.svg"), no, 10px auto, center center); }
+
+
+// .sizeTest1{ .size(100% left); }
+// .sizeTest1{ .size(clear); }
+// .sizeTest2{ .size(1em auto left); }
+// .sizeTest3{ .size(1em 2em 3em); }
+// .sizeTest4{ .size(1em 2em 3em clear); }
+// .sizeTest5{ .size(1em 2em 3em 4em 5em); }
+// .sizeTest6{ .size(1em 2em 3em 4em 5em 6em); }
+// .sizeTest7{ .size(clear 2em); }
+// .sizeTest8{ .size(auto 2em); }
+// .sizeTest9{ .size(n 2em n); }
+// .sizeTest10{ .size(n 2em n 4em); }
+// .sizeTest11{ .size(n 2em n 4em n); }
+// .sizeTest12{ .size(n 2em n 4em n 6em); }
+// .sizeTest13{ .size(n 2em n 4em n 6em right clear); }
+
+
+// .opacityTest{ .opacity(.5); }
+
+// .gridTest{ .grid(2); }
+// .gridTestTwo{ .grid(3, even); }
+// .gridTestThree{ .grid(4, even, 4%); }
+// .gridTestFour{ .grid(2, 10% 90%); }
+// .gridTestFive{ .grid(3, 10% 40% 50%); }
+// .gridTestSix{ .grid(4, 10% 20% 30% 40%); }
+// .gridTestSeven{ .grid(4, 10% 20% 30% 40%, 10%); } //"LessMinded with assume 100% and scale widths to adjust for margins"
+
+
+// .verticalTest{ .vertical-text(30px, left, 10px 20px); }
+// .zTest{ .z(1000); }
+// .fontTest{ .font(a); }
+// .fontTestTwo{ .font(v); }
+// .displayTest{ .dis(yes); }
+// .displayTestTwo{ .dis(ib); }
+// .textTest{ .txt(d "<" cap caps lower none c l r j b u i s o n no 1.2em #fff); }
+// .positionTest{ .pos(a); }
+// .positionTestTwo{ .pos(f); }
+// .placeTest{ .place(20px); }
+// .placeTestTwo{ .place(20px 20px); }
+// .placeTestThree{ .place(n 20px 20px); }
+// .placeTestFour{ .place(n n 20px 20px); }
+// .placeTest-Uncommon{ .place(10px 20px 30px 40px); }
+// .overTest{ .over(v h s a d i xv xh xs xa xd xi yv yh ys ya yd yi touch auto); }
+
+
+
+
+// .backgroundTest1{ .bg(transparent); }
+// .backgroundTest2{ .bg(#fff no); }
+// .backgroundTest3{ .bg(url("@{svg}location.svg") no); }
+// .backgroundTest4{ .bg(url("@{svg}location.svg") #fff pos 50% 90% size 1em 2em x f oc cb); }
+// .backgroundTest5{ .bg(gradent #ccc #111 hover); }
+// .backgroundTest6{ .bg(gradent #fff #000 hover hor); }
+
+.spinnerTest{ .spinner(); }
+
+
+
+
+
+
+
+
+// /*select, checkbox, and radio styles*/
+// /*commons*/
+// div.checker, div.radio{ display:-moz-inline-box; .dis(ib); *display:inline; zoom:1; vertical-align:middle; }
+// div.selector:focus, div.checker:focus, div.radio:focus{ outline:0; }
+// div.selector, div.selector *, div.radio, div.radio *, div.checker, div.checker *{ margin:0; padding:0; }
+// div.checker input{ -moz-appearance:none; -webkit-appearance:none; }
+
+// /*select boxes*/
+// div.selector{ .pos(r); .size(100%) !important; .size(n 2.3em); .dis(b); .bg(url("@{svg}arrow-down-black.svg")); .over(h); .box-sizing();
+// 			  border:1px solid #888; border-radius:5px; .txt(@black 1em); margin:0 auto; padding:0 0.5em; line-height:2.3em;
+// 			  background-position:98% center; background-repeat:no-repeat; background-size:1.5em auto;
+// 	span{ .dis(b); .over(h); .size(100%) !important;text-overflow:ellipsis; white-space:nowrap; cursor:pointer; }
+// 	select{ .bg(no); .pos(a); .opacity(0); .size(100% 100%); .place(2px n n 0); border:none; }
+// }
+
+// /*checkboxes*/
+// div.checker{ margin:.2em 0;
+// 	input{ .size(100% 100%); .opacity(0); border:none; .bg(no); display:-moz-inline-box; .dis(ib); *display:inline; zoom:1; }
+// 	span{ display:-moz-inline-box; .dis(ib); *display:inline; zoom:1; .txt(c); .size(1.7em 1.7em); margin-left:.3em;
+// 			.bg(url("@{svg}checkboxNormal.svg")); background-repeat:no-repeat; background-position:0 0; background-size:1.7em; }
+// 		span.checked{ .bg(url("@{svg}checkboxActive.svg")); }
+// }
+
+// /*radio buttons*/
+// div.radio{ .pos(r); margin-right:3px;
+// 	input{ .size(100% 100%); .opacity(0); .bg(no); .txt(c); .dis(ib); 
+// 			*display:inline; zoom:1; border:none; display:-moz-inline-box; }
+// 	span{ .bg(url("@{svg}radioNormal.svg")); background-repeat:no-repeat; background-position:0 0; background-size:2.3em;
+// 			.size(2.3em 2.3em); display:-moz-inline-box; .dis(ib); *display:inline; zoom:1; .txt(c); }
+// 		span.checked{ .bg(url("@{svg}radioActive.svg")); }
+// }
+
+// .fakeRadio{ .bg(url("@{svg}radioNormal.svg")); background-repeat:no-repeat; background-position:95% center; background-size:2.3em;
+// 			.size(2.3em 2.3em); display:-moz-inline-box; .dis(ib); *display:inline; zoom:1;
+// 	&.active{ .bg(url("@{svg}radioActive.svg")); }
+// }
+
+

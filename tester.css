@@ -1,0 +1,97 @@
+.spinnerTest .load_blocker {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999 !important;
+  background-color: #000000;
+  display: block;
+  height: 100%;
+  width: 100%;
+  zoom: 1;
+  filter: alpha(opacity=(70));
+  opacity: 0.7;
+  -moz-opacity: 0.7;
+}
+.spinnerTest .load_blocker .ajax-spinner-bars {
+  position: absolute;
+  height: 1em;
+  width: 1em;
+  left: 50%;
+  top: 50%;
+}
+.spinnerTest .load_blocker .ajax-spinner-bars > div {
+  position: absolute;
+  height: 10px;
+  width: 2px;
+  background-color: #ffffff;
+  zoom: 1;
+  filter: alpha(opacity=(5));
+  opacity: 0.05;
+  -moz-opacity: 0.05;
+  -webkit-animation: fadeit 0.8s linear infinite;
+  animation: fadeit 0.8s linear infinite;
+}
+.spinnerTest .load_blocker .ajax-spinner-bars > .bar-16 {
+  -lessMinded: transform ;-webkit-transform:rotate(337.5deg) translate(0, -12px);-ms-transform:rotate(337.5deg) translate(0, -12px);transform:rotate(337.5deg) translate(0, -12px) !important;
+  -lessMinded: animation-delay ;-webkit-animation-delay:0.8s;animation-delay:0.8s !important;
+}
+.spinnerTest .load_blocker .ajax-spinner-bars > .bar-15 {
+  -lessMinded: transform ;-webkit-transform:rotate(315deg) translate(0, -12px);-ms-transform:rotate(315deg) translate(0, -12px);transform:rotate(315deg) translate(0, -12px) !important;
+  -lessMinded: animation-delay ;-webkit-animation-delay:0.75s;animation-delay:0.75s !important;
+}
+.spinnerTest .load_blocker .ajax-spinner-bars > .bar-14 {
+  -lessMinded: transform ;-webkit-transform:rotate(292.5deg) translate(0, -12px);-ms-transform:rotate(292.5deg) translate(0, -12px);transform:rotate(292.5deg) translate(0, -12px) !important;
+  -lessMinded: animation-delay ;-webkit-animation-delay:0.7s;animation-delay:0.7s !important;
+}
+.spinnerTest .load_blocker .ajax-spinner-bars > .bar-13 {
+  -lessMinded: transform ;-webkit-transform:rotate(270deg) translate(0, -12px);-ms-transform:rotate(270deg) translate(0, -12px);transform:rotate(270deg) translate(0, -12px) !important;
+  -lessMinded: animation-delay ;-webkit-animation-delay:0.65s;animation-delay:0.65s !important;
+}
+.spinnerTest .load_blocker .ajax-spinner-bars > .bar-12 {
+  -lessMinded: transform ;-webkit-transform:rotate(247.5deg) translate(0, -12px);-ms-transform:rotate(247.5deg) translate(0, -12px);transform:rotate(247.5deg) translate(0, -12px) !important;
+  -lessMinded: animation-delay ;-webkit-animation-delay:0.6s;animation-delay:0.6s !important;
+}
+.spinnerTest .load_blocker .ajax-spinner-bars > .bar-11 {
+  -lessMinded: transform ;-webkit-transform:rotate(225deg) translate(0, -12px);-ms-transform:rotate(225deg) translate(0, -12px);transform:rotate(225deg) translate(0, -12px) !important;
+  -lessMinded: animation-delay ;-webkit-animation-delay:0.55s;animation-delay:0.55s !important;
+}
+.spinnerTest .load_blocker .ajax-spinner-bars > .bar-10 {
+  -lessMinded: transform ;-webkit-transform:rotate(202.5deg) translate(0, -12px);-ms-transform:rotate(202.5deg) translate(0, -12px);transform:rotate(202.5deg) translate(0, -12px) !important;
+  -lessMinded: animation-delay ;-webkit-animation-delay:0.5s;animation-delay:0.5s !important;
+}
+.spinnerTest .load_blocker .ajax-spinner-bars > .bar-9 {
+  -lessMinded: transform ;-webkit-transform:rotate(180deg) translate(0, -12px);-ms-transform:rotate(180deg) translate(0, -12px);transform:rotate(180deg) translate(0, -12px) !important;
+  -lessMinded: animation-delay ;-webkit-animation-delay:0.45s;animation-delay:0.45s !important;
+}
+.spinnerTest .load_blocker .ajax-spinner-bars > .bar-8 {
+  -lessMinded: transform ;-webkit-transform:rotate(157.5deg) translate(0, -12px);-ms-transform:rotate(157.5deg) translate(0, -12px);transform:rotate(157.5deg) translate(0, -12px) !important;
+  -lessMinded: animation-delay ;-webkit-animation-delay:0.4s;animation-delay:0.4s !important;
+}
+.spinnerTest .load_blocker .ajax-spinner-bars > .bar-7 {
+  -lessMinded: transform ;-webkit-transform:rotate(135deg) translate(0, -12px);-ms-transform:rotate(135deg) translate(0, -12px);transform:rotate(135deg) translate(0, -12px) !important;
+  -lessMinded: animation-delay ;-webkit-animation-delay:0.35s;animation-delay:0.35s !important;
+}
+.spinnerTest .load_blocker .ajax-spinner-bars > .bar-6 {
+  -lessMinded: transform ;-webkit-transform:rotate(112.5deg) translate(0, -12px);-ms-transform:rotate(112.5deg) translate(0, -12px);transform:rotate(112.5deg) translate(0, -12px) !important;
+  -lessMinded: animation-delay ;-webkit-animation-delay:0.3s;animation-delay:0.3s !important;
+}
+.spinnerTest .load_blocker .ajax-spinner-bars > .bar-5 {
+  -lessMinded: transform ;-webkit-transform:rotate(90deg) translate(0, -12px);-ms-transform:rotate(90deg) translate(0, -12px);transform:rotate(90deg) translate(0, -12px) !important;
+  -lessMinded: animation-delay ;-webkit-animation-delay:0.25s;animation-delay:0.25s !important;
+}
+.spinnerTest .load_blocker .ajax-spinner-bars > .bar-4 {
+  -lessMinded: transform ;-webkit-transform:rotate(67.5deg) translate(0, -12px);-ms-transform:rotate(67.5deg) translate(0, -12px);transform:rotate(67.5deg) translate(0, -12px) !important;
+  -lessMinded: animation-delay ;-webkit-animation-delay:0.2s;animation-delay:0.2s !important;
+}
+.spinnerTest .load_blocker .ajax-spinner-bars > .bar-3 {
+  -lessMinded: transform ;-webkit-transform:rotate(45deg) translate(0, -12px);-ms-transform:rotate(45deg) translate(0, -12px);transform:rotate(45deg) translate(0, -12px) !important;
+  -lessMinded: animation-delay ;-webkit-animation-delay:0.15s;animation-delay:0.15s !important;
+}
+.spinnerTest .load_blocker .ajax-spinner-bars > .bar-2 {
+  -lessMinded: transform ;-webkit-transform:rotate(22.5deg) translate(0, -12px);-ms-transform:rotate(22.5deg) translate(0, -12px);transform:rotate(22.5deg) translate(0, -12px) !important;
+  -lessMinded: animation-delay ;-webkit-animation-delay:0.1s;animation-delay:0.1s !important;
+}
+.spinnerTest .load_blocker .ajax-spinner-bars > .bar-1 {
+  -lessMinded: transform ;-webkit-transform:rotate(0deg) translate(0, -12px);-ms-transform:rotate(0deg) translate(0, -12px);transform:rotate(0deg) translate(0, -12px) !important;
+  -lessMinded: animation-delay ;-webkit-animation-delay:0.05s;animation-delay:0.05s !important;
+}
