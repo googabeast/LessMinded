@@ -42,7 +42,17 @@
 			return(isit);
 		},
 		contains:function(str, type){
-			var isit = (str.indexOf(type) > 0) ? true : false;
+			var isit,
+				arr = type.split(" "),
+				count = arr.length;
+			
+			if(arr.length > 1){
+				for(var i = 0; i < count; ++i){
+					isit = (str.indexOf(arr[i]) > 0) ? true : false;	
+				};
+			}else{
+				isit = (str.indexOf(type) > 0) ? true : false;
+			};
 			return(isit);
 		},
 		blank:function(shorthand){

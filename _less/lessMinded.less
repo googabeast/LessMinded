@@ -33,8 +33,8 @@
 @desk:~'only screen and (min-width:1224px)';
 @large:~'only screen and (min-width:1824px)';
 @iphone4:~'only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-device-pixel-ratio:1.5)';
-@iphone4retLand:~'(device-height: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation:landscape)';
-@iphone4retPort:~'(device-height: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation:portrait)';
+@iphone4retLand:~'(device-height:480px) and (-webkit-min-device-pixel-ratio:2) and (orientation:landscape)';
+@iphone4retPort:~'(device-height:480px) and (-webkit-min-device-pixel-ratio:2) and (orientation:portrait)';
 @iphone5:~'screen and (device-aspect-ratio:40/71)';
 @iphone5Land:~'screen and (device-aspect-ratio:40/71) and (orientation:landscape)';
 ///*********************************************************************************************************/
@@ -281,30 +281,30 @@
 .check(){ &:before{ content:"\2713"; } }				.close(){ &:before{ content:"\2A2F"; } }
 .question(){ &:before{ content:"\2753"; } }				.question2(){ &:before{ content:"\FFFD"; } }
 
-.mail(){ &:before{ content: "\2709"; } }
-.tel(){ &:before{ content: "\260e"; } }
+.mail(){ &:before{ content:"\2709"; } }
+.tel(){ &:before{ content:"\260e"; } }
 
 .l-decor(){ &:before{ content:"\A9C1"; } }				.r-decor(){ &:before{ content:"\A9C2"; } }
 .l-arrow(){ &:before{ content:"\2906"; } }				.r-arrow(){ &:before{ content:"\2907"; } }
 .l-arrow2(){ &:before{ content:"\276E"; } }				.r-arrow2(){ &:before{ content:"\276f"; } }
 .l-dub-arrow(){ &:before{ content:"\300A"; } }			.r-dub-arrow(){ &:before{ content:"\300b"; } }
 
-.cir-num01(){ &:before{ content: "\2460"; } }			.cir-num02(){ &:before{ content: "\2461"; } }
-.cir-num03(){ &:before{ content: "\2462"; } }			.cir-num04(){ &:before{ content: "\2463"; } }
-.cir-num05(){ &:before{ content: "\2464"; } }			.cir-num06(){ &:before{ content: "\2465"; } }
-.cir-num07(){ &:before{ content: "\2466"; } }			.cir-num08(){ &:before{ content: "\2467"; } }
-.cir-num09(){ &:before{ content: "\2468"; } }			.cir-num10(){ &:before{ content: "\2469"; } }
-.cir-num11(){ &:before{ content: "\246a"; } }			.cir-num12(){ &:before{ content: "\246b"; } }
-.cir-num13(){ &:before{ content: "\246c"; } }			.cir-num14(){ &:before{ content: "\246d"; } }
-.cir-num15(){ &:before{ content: "\246e"; } }			.cir-num16(){ &:before{ content: "\246f"; } }
-.cir-num17(){ &:before{ content: "\2470"; } }			.cir-num18(){ &:before{ content: "\2471"; } }
-.cir-num19(){ &:before{ content: "\2472"; } }			.cir-num20(){ &:before{ content: "\2473"; } }
+.cir-num01(){ &:before{ content:"\2460"; } }			.cir-num02(){ &:before{ content:"\2461"; } }
+.cir-num03(){ &:before{ content:"\2462"; } }			.cir-num04(){ &:before{ content:"\2463"; } }
+.cir-num05(){ &:before{ content:"\2464"; } }			.cir-num06(){ &:before{ content:"\2465"; } }
+.cir-num07(){ &:before{ content:"\2466"; } }			.cir-num08(){ &:before{ content:"\2467"; } }
+.cir-num09(){ &:before{ content:"\2468"; } }			.cir-num10(){ &:before{ content:"\2469"; } }
+.cir-num11(){ &:before{ content:"\246a"; } }			.cir-num12(){ &:before{ content:"\246b"; } }
+.cir-num13(){ &:before{ content:"\246c"; } }			.cir-num14(){ &:before{ content:"\246d"; } }
+.cir-num15(){ &:before{ content:"\246e"; } }			.cir-num16(){ &:before{ content:"\246f"; } }
+.cir-num17(){ &:before{ content:"\2470"; } }			.cir-num18(){ &:before{ content:"\2471"; } }
+.cir-num19(){ &:before{ content:"\2472"; } }			.cir-num20(){ &:before{ content:"\2473"; } }
 
-.double-cir-num01(){ &:before{ content: "\24F5"; } }	.double-cir-num02(){ &:before{ content: "\24F6"; } }
-.double-cir-num03(){ &:before{ content: "\24F7"; } }	.double-cir-num04(){ &:before{ content: "\24F8"; } }
-.double-cir-num05(){ &:before{ content: "\24F9"; } }	.double-cir-num06(){ &:before{ content: "\24Fa"; } }
-.double-cir-num07(){ &:before{ content: "\24Fb"; } }	.double-cir-num08(){ &:before{ content: "\24Fc"; } }
-.double-cir-num09(){ &:before{ content: "\24Fd"; } }	.double-cir-num10(){ &:before{ content: "\24Fe"; } }
+.double-cir-num01(){ &:before{ content:"\24F5"; } }	.double-cir-num02(){ &:before{ content:"\24F6"; } }
+.double-cir-num03(){ &:before{ content:"\24F7"; } }	.double-cir-num04(){ &:before{ content:"\24F8"; } }
+.double-cir-num05(){ &:before{ content:"\24F9"; } }	.double-cir-num06(){ &:before{ content:"\24Fa"; } }
+.double-cir-num07(){ &:before{ content:"\24Fb"; } }	.double-cir-num08(){ &:before{ content:"\24Fc"; } }
+.double-cir-num09(){ &:before{ content:"\24Fd"; } }	.double-cir-num10(){ &:before{ content:"\24Fe"; } }
 ///************************************************************************** end ascii icons ***************/
 
 
@@ -326,17 +326,17 @@
 ///**********************************************************************************************************/
 .bg(@vars){
 	@index:length(@vars);
-	@dataContent: null;
-	@dataPrefix: ~'url("data:image/svg+xml;base64,';
-	@dataSuffix: ~'")';
-	@b64Out: ~`(function(a,b,c){function e(a){a=a.replace(/\r\n/g,'\n');var b='';for(var c=0;c<a.length;c++){var d=a.charCodeAt(c);if(d<128){b+=String.fromCharCode(d)}else if(d>127&&d<2048){b+=String.fromCharCode(d>>6|192);b+=String.fromCharCode(d&63|128)}else{b+=String.fromCharCode(d>>12|224);b+=String.fromCharCode(d>>6&63|128);b+=String.fromCharCode(d&63|128)}}return b}function f(a){var b='';var c,f,g,h,i,j,l;var m=0;a=e(a);while(m<a.length){c=a.charCodeAt(m++);f=a.charCodeAt(m++);g=a.charCodeAt(m++);h=c>>2;i=(c&3)<<4|f>>4;j=(f&15)<<2|g>>6;l=g&63;if(isNaN(f)){j=l=64}else if(isNaN(g)){l=64}b=b+d.charAt(h)+d.charAt(i)+d.charAt(j)+d.charAt(l)}return b}var d='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';return a+f(b)+c})('@{dataPrefix}','@{dataContent}','@{dataSuffix}')`;
+	@dataContent:null;
+	@dataPrefix:~'url("data:image/svg+xml;base64,';
+	@dataSuffix:~'")';
+	@b64Out:~`(function(a,b,c){function e(a){a=a.replace(/\r\n/g,'\n');var b='';for(var c=0;c<a.length;c++){var d=a.charCodeAt(c);if(d<128){b+=String.fromCharCode(d)}else if(d>127&&d<2048){b+=String.fromCharCode(d>>6|192);b+=String.fromCharCode(d&63|128)}else{b+=String.fromCharCode(d>>12|224);b+=String.fromCharCode(d>>6&63|128);b+=String.fromCharCode(d&63|128)}}return b}function f(a){var b='';var c,f,g,h,i,j,l;var m=0;a=e(a);while(m<a.length){c=a.charCodeAt(m++);f=a.charCodeAt(m++);g=a.charCodeAt(m++);h=c>>2;i=(c&3)<<4|f>>4;j=(f&15)<<2|g>>6;l=g&63;if(isNaN(f)){j=l=64}else if(isNaN(g)){l=64}b=b+d.charAt(h)+d.charAt(i)+d.charAt(j)+d.charAt(l)}return b}var d='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';return a+f(b)+c})('@{dataPrefix}','@{dataContent}','@{dataSuffix}')`;
 
 	.bg-loop(@index) when (@index > 0){
 		@turn:extract(@vars, @index);
 		@turn1:extract(@vars, @index + 1);
 		@turn2:extract(@vars, @index + 2);
-		@gradient: ~`api.contains('@{vars}', 'gradient')`;
-		@horizontal: ~`api.contains('@{vars}', 'hor')`;
+		@gradient:~`api.contains('@{vars}', 'gradient')`;
+		@horizontal:~`api.contains('@{vars}', 'hor')`;
 
 		.condition(@turn) when (@turn = none){ background:none; }
 		.condition(@turn) when (iscolor(@turn)) and not (@gradient = true){ background-color:@turn; }
@@ -379,48 +379,48 @@
 			.do(@turn);
 		}
 		.condition(@turn) when (@turn = gradient), (@turn = g) and (@horizontal = false){
-			@startColor: @turn1;
-			@endColor: @turn2;
-			@hover: ~`api.contains("@{vars}", "hover")`;
+			@startColor:@turn1;
+			@endColor:@turn2;
+			@hover:~`api.contains("@{vars}", "hover")`;
 			.do(@turn){
-				@dataContent: ~'<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none"><linearGradient id="g743" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="0%" y2="100%"><stop stop-color="@{startColor}" offset="0"/><stop stop-color="@{endColor}" offset="1"/></linearGradient><rect x="0" y="0" width="1" height="1" fill="url(#g743)"/></svg>';
-				background-color: mix(@startColor, @endColor, 60%);
-				background: ~"@{b64Out}";
-				background: -moz-linear-gradient(top, @startColor 0%, @endColor 100%);
-				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @startColor), color-stop(100%, @endColor));
+				@dataContent:~'<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none"><linearGradient id="g743" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="0%" y2="100%"><stop stop-color="@{startColor}" offset="0"/><stop stop-color="@{endColor}" offset="1"/></linearGradient><rect x="0" y="0" width="1" height="1" fill="url(#g743)"/></svg>';
+				background-color:mix(@startColor, @endColor, 60%);
+				background:~"@{b64Out}";
+				background:-moz-linear-gradient(top, @startColor 0%, @endColor 100%);
+				background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, @startColor), color-stop(100%, @endColor));
 				.value(background, ~"linear-gradient(top, @{startColor}, @{endColor})", ~'webkit o ms');
 			}
 			.do(@turn) when (@hover = true){
 				&:hover{
-					@dataContent: ~'<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none"><linearGradient id="g743" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="0%" y2="100%"><stop stop-color="@{startColor}" offset="0"/><stop stop-color="@{endColor}" offset="1"/></linearGradient><rect x="0" y="0" width="1" height="1" fill="url(#g743)"/></svg>';
-					background-color: mix(@endColor, @startColor, 60%);
-					background: ~"@{b64Out}";
-					background: -moz-linear-gradient(top, @endColor 0%, @startColor 100%);
-					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @endColor), color-stop(100%, @startColor));
+					@dataContent:~'<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none"><linearGradient id="g743" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="0%" y2="100%"><stop stop-color="@{startColor}" offset="0"/><stop stop-color="@{endColor}" offset="1"/></linearGradient><rect x="0" y="0" width="1" height="1" fill="url(#g743)"/></svg>';
+					background-color:mix(@endColor, @startColor, 60%);
+					background:~"@{b64Out}";
+					background:-moz-linear-gradient(top, @endColor 0%, @startColor 100%);
+					background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, @endColor), color-stop(100%, @startColor));
 					.value(background, ~"linear-gradient(top, @{endColor} 0%, @{startColor} 100%)", ~'webkit o ms');
 				}
 			};
 			.do(@turn);
 		}
 		.condition(@turn) when (@turn = gradient), (@turn = g) and (@horizontal = true){
-			@startColor: @turn1;
-			@endColor: @turn2;
-			@hover: ~`api.contains("@{vars}", "hover")`;
+			@startColor:@turn1;
+			@endColor:@turn2;
+			@hover:~`api.contains("@{vars}", "hover")`;
 			.do(@turn){
-				@dataContent: ~'<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none"><linearGradient id="g743" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="0%" y2="100%"><stop stop-color="@{startColor}" offset="0"/><stop stop-color="@{endColor}" offset="1"/></linearGradient><rect x="0" y="0" width="1" height="1" fill="url(#g743)"/></svg>';
-				background-color: mix(@startColor, @endColor, 60%);
-				background: ~"@{b64Out}";
-				background: -moz-linear-gradient(left, @startColor 0%, @endColor 100%);
-				background: -webkit-gradient(linear, left top, right top, color-stop(0%, @startColor), color-stop(100%, @endColor));
+				@dataContent:~'<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none"><linearGradient id="g743" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="0%" y2="100%"><stop stop-color="@{startColor}" offset="0"/><stop stop-color="@{endColor}" offset="1"/></linearGradient><rect x="0" y="0" width="1" height="1" fill="url(#g743)"/></svg>';
+				background-color:mix(@startColor, @endColor, 60%);
+				background:~"@{b64Out}";
+				background:-moz-linear-gradient(left, @startColor 0%, @endColor 100%);
+				background:-webkit-gradient(linear, left top, right top, color-stop(0%, @startColor), color-stop(100%, @endColor));
 				.value(background, ~"linear-gradient(left, @{startColor}, @{endColor})", ~'webkit o ms');
 			}
 			.do(@turn) when (@hover = true){
 				&:hover{
-					@dataContent: ~'<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none"><linearGradient id="g743" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="0%" y2="100%"><stop stop-color="@{startColor}" offset="0"/><stop stop-color="@{endColor}" offset="1"/></linearGradient><rect x="0" y="0" width="1" height="1" fill="url(#g743)"/></svg>';
-					background-color: mix(@endColor, @startColor, 60%);
-					background: ~"@{b64Out}";
-					background: -moz-linear-gradient(left, @endColor 0%, @startColor 100%);
-					background: -webkit-gradient(linear, left top, right top, color-stop(0%, @endColor), color-stop(100%, @startColor));
+					@dataContent:~'<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none"><linearGradient id="g743" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="0%" y2="100%"><stop stop-color="@{startColor}" offset="0"/><stop stop-color="@{endColor}" offset="1"/></linearGradient><rect x="0" y="0" width="1" height="1" fill="url(#g743)"/></svg>';
+					background-color:mix(@endColor, @startColor, 60%);
+					background:~"@{b64Out}";
+					background:-moz-linear-gradient(left, @endColor 0%, @startColor 100%);
+					background:-webkit-gradient(linear, left top, right top, color-stop(0%, @endColor), color-stop(100%, @startColor));
 					.value(background, ~"linear-gradient(left, @{endColor} 0%, @{startColor} 100%)", ~'webkit o ms');
 				}
 			};
@@ -466,11 +466,13 @@
 ///**********************************************************************************************************/
 .size(@vars){
 	@index:length(@vars);
+	@contains:~`api.contains('@{vars}', 'w h minw minh maxw maxh')`;
 
 	.size-loop(@index) when (@index > 0){
 		@turn:extract(@vars, @index);
 		@turn1:extract(@vars, @index + 1);
-		.condition(@turn) when (@turn = auto), (isunit(@turn, px)), (isunit(@turn, rem)), (isunit(@turn, "%")), (isunit(@turn, em)), (isunit(@turn, pt)){
+		
+		.condition(@turn) when (@contains = false) and not (iskeyword(@turn)){
 			.do(@turn) when (@index = 1){ width:@turn; }
 			.do(@turn) when (@index = 2){ height:@turn; }
 			.do(@turn) when (@index = 3){ min-width:@turn; }
@@ -479,20 +481,22 @@
 			.do(@turn) when (@index = 6){ max-height:@turn; }
 			.do(@turn);
 		}
-		.condition(@turn) when (iskeyword(@turn)){
+		.condition(@turn) when (@contains = true){
+			.do(@turn) when (@turn = w){ width:@turn1; }
+			.do(@turn) when (@turn = h){ height:@turn1; }
+			.do(@turn) when (@turn = minw){ min-width:@turn1; }
+			.do(@turn) when (@turn = minh){ min-height:@turn1; }
+			.do(@turn) when (@turn = maxw){ max-width:@turn1; }
+			.do(@turn) when (@turn = maxh){ max-height:@turn1; }
+			.do(@turn);
+		}
+		.condition(@turn){
 			.do(@turn) when (@turn = l), (@turn = left){ float:left; }
 			.do(@turn) when (@turn = r), (@turn = right){ float:right; }
 			.do(@turn) when (@turn = c), (@turn = clear){ clear:both; }
 			.do(@turn);
 		}
-		.condition(@turn) when (iskeyword(@turn) = w){ width:@turn1; }
-		.condition(@turn) when (iskeyword(@turn) = h){ height:@turn1; }
-		.condition(@turn) when (iskeyword(@turn) = minw){ min-width:@turn1; }
-		.condition(@turn) when (iskeyword(@turn) = minh){ min-height:@turn1; }
-		.condition(@turn) when (iskeyword(@turn) = maxw){ max-width:@turn1; }
-		.condition(@turn) when (iskeyword(@turn) = maxh){ max-height:@turn1; }
 		.condition(@turn);
-
 		.size-loop(@index - 1);
 	}
 	.size-loop(@index);
@@ -517,12 +521,12 @@
 
 .grid(@columns, @scale:even, @gap:none, @padd:0%, @html5:no){
 	.clearfix();
-	@vars: ~`"@arguments"`;
+	@vars:~`"@arguments"`;
 	> div{ .boxed(); float:left; }
 	.condition(@vars) when (@html5 = no){
 
 		.do(@vars) when (@scale = even) and (@gap = none){
-			@temp: percentage(1 / @columns);
+			@temp:percentage(1 / @columns);
 			.grid-loop(@i) when (@i > 0){
 				&:nth-child(@{i}), .col@{i}{ .size(@temp); }
 				.grid-loop(@i - 1);
@@ -532,12 +536,12 @@
 
 		.do(@vars) when (@scale = even) and not (@gap = none){
 			.when(@vars) when (@columns = 2){
-				@margin: (unit(@gap) / 100) / @columns;
-				@width: (1 / @columns) - (@margin * @columns);
+				@margin:(unit(@gap) / 100) / @columns;
+				@width:(1 / @columns) - (@margin * @columns);
 				.grid-loop(@i) when (@i > 0){
-					.top(@i) when (@i = @columns){ &:nth-child(@{i}), .col@{i}{ @edgeWidth: (@width + @margin); .size(percentage(@edgeWidth)); margin-left: percentage(@margin); } }
-					.top(@i) when (@i > 1) and (@i < @columns){ &:nth-child(@{i}), .col@{i}{ .size(percentage(@width)); margin: percentage(@margin); } }
-					.top(@i) when (@i = 1){ &:nth-child(@{i}), .col@{i}{ @edgeWidth: (@width + @margin); .size(percentage(@edgeWidth)); margin-right: percentage(@margin); } }
+					.top(@i) when (@i = @columns){ &:nth-child(@{i}), .col@{i}{ @edgeWidth:(@width + @margin); .size(percentage(@edgeWidth)); margin-left:percentage(@margin); } }
+					.top(@i) when (@i > 1) and (@i < @columns){ &:nth-child(@{i}), .col@{i}{ .size(percentage(@width)); margin:percentage(@margin); } }
+					.top(@i) when (@i = 1){ &:nth-child(@{i}), .col@{i}{ @edgeWidth:(@width + @margin); .size(percentage(@edgeWidth)); margin-right:percentage(@margin); } }
 					.top(@i);
 					.grid-loop(@i - 1);
 				}
@@ -547,7 +551,7 @@
 			.when(@vars) when (@columns > 2){
 				@margin:(unit(@gap) / 100);
 				@marginTotal:@margin * (@columns - 1);
-				@width: (1 / @columns);
+				@width:(1 / @columns);
 				@widthTotal:(1 - @marginTotal) / @columns;
 				.grid-loop(@i) when (@i > 0){
 					.top(@i) when (@i = @columns){ &:nth-child(@{i}), .col@{i}{ .size(percentage(@widthTotal)); margin-left:percentage(@margin); } }
@@ -563,7 +567,7 @@
 
 		.do(@vars) when (length(@scale) > 1) and (@gap = none){
 			.grid-loop(@i) when (@i > 0){
-				@temp: extract(@scale, @i);
+				@temp:extract(@scale, @i);
 				&:nth-child(@{i}), .col@{i}{ .size(@temp); }
 				.grid-loop(@i - 1);
 			}
@@ -571,14 +575,14 @@
 		}
 
 		.do(@vars) when (length(@scale) > 1) and not (@gap = none){
-			@margin: (unit(@gap) / 100) / length(@scale);
-			@mar: (@margin / @columns);
+			@margin:(unit(@gap) / 100) / length(@scale);
+			@mar:(@margin / @columns);
 
 			.when(@vars){
 				.grid-loop(@i) when (@i > 0){
-					@width: (unit(extract(@scale, @i)) / 100);
+					@width:(unit(extract(@scale, @i)) / 100);
 					.top(@i) when (@i = 1){ &:nth-child(@{i}), .col@{i}{ .size(percentage(@width)); } }
-					.top(@i) when not (@i = 1) and not (@i = @columns){ &:nth-child(@{i}), .col@{i}{ @newWidth: (@width - (@mar*2)); .size(percentage(@newWidth)); margin: 0 percentage(@mar); } }
+					.top(@i) when not (@i = 1) and not (@i = @columns){ &:nth-child(@{i}), .col@{i}{ @newWidth:(@width - (@mar*2)); .size(percentage(@newWidth)); margin:0 percentage(@mar); } }
 					.top(@i) when (@i = @columns){ &:nth-child(@{i}), .col@{i}{ .size(percentage(@width)); } }
 					.top(@i);
 					.grid-loop(@i - 1);
@@ -612,7 +616,7 @@
 }
 
 .select(@color, @bg:none){
-	@vars: ~`"@arguments"`;
+	@vars:~`"@arguments"`;
 	.condition(@vars) when (@color = none){
 		.do(@vars){ .property(user-select, none, ~'webkit moz o ms'); }
 		.do(@vars);
@@ -628,7 +632,7 @@
 }
 
 .vertical-text(@h:auto, @c:center, @p:no){
-	@vars: ~`"@arguments"`;
+	@vars:~`"@arguments"`;
 	.condition(@vars){
 		.do(@vars) when not (iskeyword(@p) = no){ padding:@p; }
 		.do(@vars) when (iskeyword(@c)){ .txt(@c); }
@@ -639,8 +643,8 @@
 	//usage:	.vertical-text(30px, left, 10px 20px);
 }
 
-.rotate(@x){
-	.property(transform, rotate(~"@{x}deg"), ~"webkit moz o ms");
+.rotate(@vars){
+	.property(transform, rotate(~"@{vars}deg"), ~"webkit moz o ms");
 	//requires:	.property()
 	//usage:	.rotate(180);
 }
@@ -651,20 +655,20 @@
 	//usage:	.flip();
 }
 
-.border-radius(@args){
-	.property(border-radius, ~'@{args}', ~'webkit');
+.border-radius(@vars){
+	.property(border-radius, ~'@{vars}', ~'webkit');
 	background-clip:padding-box;
 	//requires:	.property()
 	//usage:	.border-radius(25px 25px 25px 25px);
 }
 
-.box-shadow(@args){
-	.property(box-shadow, ~"@{args}", ~'webkit moz');
+.box-shadow(@vars){
+	.property(box-shadow, ~"@{vars}", ~'webkit moz');
 	//usage:	.box-shadow(1px 2px 3px 4px #fff);
 }
 
-.inner-shadow(@args){
-	.box-shadow(inset ~"@{args}");
+.inner-shadow(@vars){
+	.box-shadow(inset ~"@{vars}");
 	//requires:	.box-shadow()
 	//usage:	.inner-shadow(1px 2px 3px 4px #fff);
 }
@@ -722,6 +726,172 @@
 // #
 // #  usage:		.sizeTest1{ .size2(1em right); }
 ///**********************************************************************************************************/
+
+
+
+///**********************************************************************************************************/
+// #                 o|                  |              |
+// #  ,---.,---.,---..|--- ,---.    ,---.|---.,---.,---.|--- ,---.
+// #  `---.|   ||    ||    |---'    `---.|   ||---'|---'|    `---.
+// #  `---'|---'`    ``---'`---'    `---'`   '`---'`---'`---'`---'
+// #       |
+///**********************************************************************************************************/
+
+
+
+
+///**********************************************************************************************************/
+// #       |             |
+// #  ,---.|---.,---.,---|,---.. . .,---.
+// #  `---.|   |,---||   ||   || | |`---.
+// #  `---'`   '`---^`---'`---'`-'-'`---'
+// #
+///**********************************************************************************************************/
+
+
+
+
+// Transform MIXIN
+.transform (@val;@origin:0 0) {
+-webkit-transform:@val;
+-webkit-transform-origin:@origin;
+-moz-transform:@val;
+-moz-transform-origin:@origin;
+-ms-transform:@val;
+-ms-transform-origin:@origin;
+-o-transform:@val;
+-o-transform-origin:@origin;
+transform:@val;
+transform-origin:@origin;
+}
+@shadow:rgba(0, 0, 0, .50);
+
+.shadow(@vars){
+	@index:length(@vars);
+
+	.shadow-loop(@index) when (@index > 0){
+		@turn:extract(@vars, @index);
+		@turn1:extract(@vars, @index+1);
+
+		.condition(@turn) when (@turn = bloat){
+			.pos(r); .z(1);
+			&:after{ .dis(b); .pos(a); .txt(" "); .size(100% 20px); .place(n n 0); .z(-1);
+					 box-shadow:0px 10px 10px -5px @shadow; border-bottom-left-radius:50% 15px; border-bottom-right-radius:50% 15px;
+			}
+		}
+		.condition(@turn) when (@turn = float){
+			.pos(r);
+			&:after{ .dis(b); .pos(a); .place(n n 0); .size(100% 7px); .txt(" ");
+					 box-shadow:@turn1 0px 11px 10px 0px; border-radius:50%;
+			}
+		}
+		.condition(@turn) when (@turn = dogear){
+			.pos(r); .z(1);
+			&:after,&:before{ .pos(a); .dis(b); .txt(" "); .z(-1); .place(n n 0); .size(100% 70%); box-shadow:@shadow 0px 10px 10px -6px; }
+			&:after{ .place(n n n 0); border-bottom-right-radius:100% 30%; }
+			&:before{ .place(n 0); border-bottom-left-radius:100% 30%; }
+		}
+		.condition(@turn) when (@turn = cast){
+			.pos(r); .z(1);
+			&:after{ .pos(a); .dis(b); .txt(" "); .z(-1); .size(100% 20%); .place(n 0 0);
+					 background-image:linear-gradient(0deg, @shadow 0, rgba(0, 0, 0, 0) 100%);
+					 .transform(~"skewX(-45deg)"; 100% 100%);
+			}
+		}
+		.condition(@turn) when (@turn = fore){
+			.pos(r); .z(1);
+			&:after{
+				@height:20px;
+				.transform(~"skewX(45deg)"; 0 0);
+				background-image:linear-gradient(180deg, @shadow 0, rgba(0, 0, 0, 0) 100%);
+				.pos(a); .dis(b); .txt(" "); .z(-1); .size(n @height); .place(n 0 -@height 0);
+			}
+		}
+		.condition(@turn) when (@turn = glass){
+			.pos(r); .z(1);
+			&:after{
+				@height:20px;
+				.pos(a); .place(0 0 0 0); .dis(b); .txt(" ");
+				background-image:linear-gradient(45deg, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 50%);
+			}
+		}
+		.condition(@turn) when (@turn = cube){
+			.pos(r);
+			@height:20px;
+			&:after,&:before{ .pos(a); .place(n 0 0); .size(100% 100%); .dis(b); .txt(" "); }
+			&:after{ .size(n @height); .place(-@height); .transform(~"skewX(-45deg)"; 0 100%); .bg(lighten(@shadow, 20%)); }
+			&:before{ .size(@height); .place(n -@height); .transform(~"skewY(-45deg)"; 0 100%); .bg(lighten(@shadow, 10%)); }
+		}
+		.condition(@turn) when (@turn = block){
+			.pos(r);
+			@height:20px;
+			&:after{ .place(-@height 0 n 0); .pos(a); .dis(b); .txt(" "); .size(100% 0);
+					 box-sizing:border-box;
+					 -moz-box-sizing:border-box;
+					 border:@height solid transparent;
+					 border-top:none;
+					 border-bottom:@height solid lighten(@shadow, 20%);
+			}
+		}
+		.condition(@turn) when (@turn = deco){
+			box-shadow:10px 10px 0 10px lighten(@shadow, 20%), -10px -10px 0 10px lighten(@shadow, 15%);
+		}
+		.condition(@turn);
+
+		.shadow-loop(@index - 1);
+	}
+	.shadow-loop(@index);
+	//usage:	.shadow(float #ccc);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

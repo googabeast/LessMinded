@@ -23,26 +23,7 @@
 .flipBack(){ .property(transform, rotate(360deg), ~"webkit moz o ms"); }
 // .box-sizing{ .property(box-sizing, ~"border-box", ~"webkit moz o ms"); }
 
-// .loop-test{
-// 	@index:16;
-// 	.mixin-loop(@index) when (@index > 0){
-// 		.do(@index) when (@index = 1){
-// 			@deg:0;
-// 			@sec:0.05;
-// 		}
-// 		.do(@index) when not (@index = 1){
-// 			@deg:(22.5 * (@index - 1));
-// 			@sec:round(0.05 + (0.05 * (@index - 1)), 2);
-// 		}
-// 		.do(@index);
-// 		.ajax-spinner-bars > .bar-@{index}{
-// 			.property(transform, rotate(~"@{deg}deg") translate(0, -12px), ~"webkit ms");
-// 			.property(animation-delay, ~"@{sec}s", ~"webkit");
-// 		}
-// 		.mixin-loop(@index - 1);
-// 	}
-// 	.mixin-loop(@index);
-// }
+
 
 
 // h3{ .titleLine(15px, #ccc, #fff); }
@@ -68,11 +49,11 @@
 // .myTest{ .select(#fff, #000); }
 // .myTest{ .vertical-div(); }
 
-// .bgTest{ .bg(url("@{svg}plusSignBlack.svg"), no, 10px auto, center center); }
+
 
 
 // .sizeTest1{ .size(100% left); }
-// .sizeTest1{ .size(clear); }
+.sizeTest1{ .size(clear); }
 // .sizeTest2{ .size(1em auto left); }
 // .sizeTest3{ .size(1em 2em 3em); }
 // .sizeTest4{ .size(1em 2em 3em clear); }
@@ -81,10 +62,13 @@
 // .sizeTest7{ .size(clear 2em); }
 // .sizeTest8{ .size(auto 2em); }
 // .sizeTest9{ .size(n 2em n); }
-// .sizeTest10{ .size(n 2em n 4em); }
+.sizeTest10{ .size(n 2em n 4em r); }
 // .sizeTest11{ .size(n 2em n 4em n); }
 // .sizeTest12{ .size(n 2em n 4em n 6em); }
 // .sizeTest13{ .size(n 2em n 4em n 6em right clear); }
+
+.sizeTest14{ .size(maxh 1px minh 2px l w 10px); }
+
 
 
 // .opacityTest{ .opacity(.5); }
@@ -123,51 +107,21 @@
 // .backgroundTest4{ .bg(url("@{svg}location.svg") #fff pos 50% 90% size 1em 2em x f oc cb); }
 // .backgroundTest5{ .bg(gradent #ccc #111 hover); }
 // .backgroundTest6{ .bg(gradent #fff #000 hover hor); }
-
-.spinnerTest{ .spinner(); }
-
+// .spinnerTest{ .spinner(); }
 
 
 
+// .shadowTest1{ .shadow(fore #ccc); }
+// .shadowTest1{ .shadow(glass #ccc); }
+// .shadowTest1{ .shadow(cube #ccc); }
+// .shadowTest1{ .shadow(block #ccc); }
+// .shadowTest1{ .shadow(deco #000); }
 
 
 
-
-// /*select, checkbox, and radio styles*/
-// /*commons*/
-// div.checker, div.radio{ display:-moz-inline-box; .dis(ib); *display:inline; zoom:1; vertical-align:middle; }
-// div.selector:focus, div.checker:focus, div.radio:focus{ outline:0; }
-// div.selector, div.selector *, div.radio, div.radio *, div.checker, div.checker *{ margin:0; padding:0; }
-// div.checker input{ -moz-appearance:none; -webkit-appearance:none; }
-
-// /*select boxes*/
-// div.selector{ .pos(r); .size(100%) !important; .size(n 2.3em); .dis(b); .bg(url("@{svg}arrow-down-black.svg")); .over(h); .box-sizing();
-// 			  border:1px solid #888; border-radius:5px; .txt(@black 1em); margin:0 auto; padding:0 0.5em; line-height:2.3em;
-// 			  background-position:98% center; background-repeat:no-repeat; background-size:1.5em auto;
-// 	span{ .dis(b); .over(h); .size(100%) !important;text-overflow:ellipsis; white-space:nowrap; cursor:pointer; }
-// 	select{ .bg(no); .pos(a); .opacity(0); .size(100% 100%); .place(2px n n 0); border:none; }
-// }
-
-// /*checkboxes*/
-// div.checker{ margin:.2em 0;
-// 	input{ .size(100% 100%); .opacity(0); border:none; .bg(no); display:-moz-inline-box; .dis(ib); *display:inline; zoom:1; }
-// 	span{ display:-moz-inline-box; .dis(ib); *display:inline; zoom:1; .txt(c); .size(1.7em 1.7em); margin-left:.3em;
-// 			.bg(url("@{svg}checkboxNormal.svg")); background-repeat:no-repeat; background-position:0 0; background-size:1.7em; }
-// 		span.checked{ .bg(url("@{svg}checkboxActive.svg")); }
-// }
-
-// /*radio buttons*/
-// div.radio{ .pos(r); margin-right:3px;
-// 	input{ .size(100% 100%); .opacity(0); .bg(no); .txt(c); .dis(ib); 
-// 			*display:inline; zoom:1; border:none; display:-moz-inline-box; }
-// 	span{ .bg(url("@{svg}radioNormal.svg")); background-repeat:no-repeat; background-position:0 0; background-size:2.3em;
-// 			.size(2.3em 2.3em); display:-moz-inline-box; .dis(ib); *display:inline; zoom:1; .txt(c); }
-// 		span.checked{ .bg(url("@{svg}radioActive.svg")); }
-// }
-
-// .fakeRadio{ .bg(url("@{svg}radioNormal.svg")); background-repeat:no-repeat; background-position:95% center; background-size:2.3em;
-// 			.size(2.3em 2.3em); display:-moz-inline-box; .dis(ib); *display:inline; zoom:1;
-// 	&.active{ .bg(url("@{svg}radioActive.svg")); }
-// }
+// .shadowTest1{ .shadow(bloat 0); }
+// .shadowTest1{ .shadow(float #ccc); }
+// .shadowTest1{ .shadow(dogear #ccc); }
+// .shadowTest1{ .shadow(cast #ccc); }
 
 

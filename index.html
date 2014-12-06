@@ -8,7 +8,7 @@
 			});//end dom
 		</script>
 	</head>
-	<body class="backgroundTest5" style="width:100%; height:100%;">
+	<body class="backgroundTest5">
 		<h3>This is a test</h3>
 
 		<div style="font-size:30px;">
@@ -22,7 +22,62 @@
 			<div class="r-arrow">testing arrow</div><!--r-arrow-->
 			<div class="l-arrow">testing arrow</div><!--r-arrow-->
 
-		</div><!---->
+		</div>
+
+
+<style type="text/css">
+#bulge:after {
+  border-bottom-left-radius: 50% 15px;
+  border-bottom-right-radius: 50% 15px;
+  bottom: 0;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.498);
+  content: " ";
+  display: block;
+  height: 20px;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+#bulge {
+  position: relative;
+  z-index: 1;
+}
+* {
+  box-sizing: border-box;
+}
+.box-demo {
+  background-color: #52b0fa;
+  color: #fff;
+  display: inline-block;
+  font-size: 2em;
+  font-weight: bold;
+  height: 220px;
+  line-height: 220px;
+  margin: 40px;
+  overflow: visible;
+  position: relative;
+  text-align: center;
+  vertical-align: top;
+  width: 220px;
+}
+.demos {
+  display: flex;
+  flex-flow: row wrap;
+}
+</style>
+
+<div class="demos">
+	
+<div class="shadowTest1 boxes">
+	<div class="content">This is some text</div>
+</div>
+
+<div class="box-demo" id="bulge"><div class="content">Bulge</div></div>
+
+</div><!--demos-->
+
+
 
 
 <!-- 		<div class="myTest2">
