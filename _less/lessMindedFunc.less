@@ -48,7 +48,7 @@
 			
 			if(arr.length > 1){
 				for(var i = 0; i < count; ++i){
-					isit = (str.indexOf(arr[i]) > 0) ? true : false;	
+					if(!isit){ isit = (str.indexOf(arr[i]) > 0) ? true : false;	 };
 				};
 			}else{
 				isit = (str.indexOf(type) > 0) ? true : false;

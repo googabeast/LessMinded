@@ -471,7 +471,7 @@
 	.size-loop(@index) when (@index > 0){
 		@turn:extract(@vars, @index);
 		@turn1:extract(@vars, @index + 1);
-		
+
 		.condition(@turn) when (@contains = false) and not (iskeyword(@turn)){
 			.do(@turn) when (@index = 1){ width:@turn; }
 			.do(@turn) when (@index = 2){ height:@turn; }
