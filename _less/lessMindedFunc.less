@@ -43,12 +43,14 @@
 		},
 		contains:function(str, type){
 			var isit,
-				arr = type.split(" "),
-				count = arr.length;
-			
-			if(arr.length > 1){
-				for(var i = 0; i < count; ++i){
-					if(!isit){ isit = (str.indexOf(arr[i]) > 0) ? true : false;	 };
+				arrType = type.split(" "),
+				arrStr = str.split(" "),
+				typeCount = arrType.length,
+				strCount = arrStr.length;
+
+			if(arrType.length > 1){
+				for(var i = 0; i < typeCount; ++i){
+					if(!isit){ isit = (str.indexOf(arrType[i]) > 0) ? true : false; };
 				};
 			}else{
 				isit = (str.indexOf(type) > 0) ? true : false;

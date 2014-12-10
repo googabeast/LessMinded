@@ -51,12 +51,14 @@
 
 
 ///**********************************************************************************************************/
-// #
-// #  |                            o    o
-// #  |    ,---.,---,,   .    ,-.-...  ,.,---.,---.
-// #  |    ,---| .-' |   |    | | || >< ||   |`---.
-// #  `---'`---^'---'`---|    ` ' '`'  ```   '`---'
-// #
+// #                                          
+// #  ,---.          |             o    o     
+// #  |__. ,---.,---.|---     ,-.-...  ,.,---.
+// #  |    |   ||   ||        | | || >< ||   |
+// #  `    `---'`   '`---'    ` ' '`'  ```   '
+// #  
+// #  usage:	.font(v);
+// #  
 ///**********************************************************************************************************/
 .font(@x){
 	.do(@x) when (@x = georgia), (@x = g){ @var:Georgia, serif; }
@@ -73,9 +75,20 @@
 	.do(@x) when (@x = courier), (@x = cn){ @var:"Courier New", Courier, monospace; }
 	.do(@x);
 	font-family:@var;
-	//usage:	.font(v);
 }
 
+
+///**********************************************************************************************************/
+// #                                                     
+// #      |o          |                       o    o     
+// #  ,---|.,---.,---.|    ,---.,   .    ,-.-...  ,.,---.
+// #  |   ||`---.|   ||    ,---||   |    | | || >< ||   |
+// #  `---'``---'|---'`---'`---^`---|    ` ' '`'  ```   '
+// #             |              `---'        
+// #  
+// #  usage:	.dis(b); | .dis(yes);
+// #  
+///**********************************************************************************************************/            
 .dis(@x){
 	.do(@x) when (@x = b), (@x = yes), (@x = block){ @var:block; }
 	.do(@x) when (@x = n), (@x = no), (@x = none){ @var:none; }
@@ -98,22 +111,35 @@
 	.do(@x) when (@x = tfootg), (@x = table-footer-group){ @var:table-footer-group; }
 	.do(@x);
 	display:@var;
-	//usage:	.dis(b) | .dis(yes)
 }
 
+
+///**********************************************************************************************************/
+// #                                         
+// #  |             |             o    o     
+// #  |--- ,---..  ,|---     ,-.-...  ,.,---.
+// #  |    |---' >< |        | | || >< ||   |
+// #  `---'`---''  ``---'    ` ' '`'  ```   '
+// #
+// #  usage:	.txt(cap caps lower none c l r j b u i s o n no 12px #fff lh 1.2em "content string" unset d);
+// #  
+///**********************************************************************************************************/                                     
 .txt(@vars){
 	@index:length(@vars);
 	.txt-loop(@index) when (@index > 0){
 		@turn:extract(@vars, @index);
+		@turn1:extract(@vars, @index + 1);
+		@turnb:extract(@vars, @index - 1);
 		.condition(@turn) when (isstring(@turn)){
 			.do(@turn){ content:@turn; }
 			.do(@turn);
 		}
-		.condition(@turn) when (@turn = d), (@turn = inherit), (isunit(@turn, px)), (isunit(@turn, rem)), (isunit(@turn, "%")), (isunit(@turn, em)), (isunit(@turn, pt)){
-			.do(@turn) when (@turn = d), (@turn = inherit){ font-size:inherit; }
-			.do(@turn) when not (@turn = d), (@turn = inherit){ font-size:@turn; }
+		.condition(@turn) when (isunit(@turn, px)), (isunit(@turn, rem)), (isunit(@turn, "%")), (isunit(@turn, em)), (isunit(@turn, pt)){ 
+			.do(@turn) when not (@turnb = lh){ font-size:@turn;  }
 			.do(@turn);
 		}
+		.condition(@turn) when (@turn = d), (@turn = inherit){ font-size:inherit; }
+		.condition(@turn) when (@turn = us), (@turn = unset){ font-size:unset; }
 		.condition(@turn) when (iscolor(@turn)){
 			.do(@turn){ color:@turn; }
 			.do(@turn);
@@ -134,7 +160,7 @@
 			.do(@turn);
 			text-align:@var;
 		}
-		.condition(@turn) when (@turn = n), (@turn = normal), (@turn = b), (@turn = bold), (@turn = u), (@turn = underline), (@turn = i), (@turn = italic), (@turn = s), (@turn = line), (@turn = strike), (@turn = o), (@turn = overline), (@turn = no){
+		.condition(@turn) when (@turn = n), (@turn = normal), (@turn = b), (@turn = bold), (@turn = u), (@turn = underline), (@turn = i), (@turn = italic), (@turn = s), (@turn = line), (@turn = strike), (@turn = o), (@turn = overline), (@turn = no), (@turn = lh){
 			.do(@turn) when (@turn = n), (@turn = normal){ font-weight:normal; }
 			.do(@turn) when (@turn = b), (@turn = bold){ font-weight:bold; }
 			.do(@turn) when (@turn = u), (@turn = underline){ text-decoration:underline; }
@@ -142,16 +168,27 @@
 			.do(@turn) when (@turn = s), (@turn = line), (@turn = strike){ text-decoration:line-through; }
 			.do(@turn) when (@turn = o), (@turn = overline){ text-decoration:overline; }
 			.do(@turn) when (@turn = no){ text-decoration:none; }
+			.do(@turn) when (@turn = lh){ line-height:@turn1; }
 			.do(@turn);
 		}
 		.condition(@turn);
-
 		.txt-loop(@index - 1);
 	}
 	.txt-loop(@index);
-	//usage:	.txt(cap caps lower none c l r j b u i s o n no 1.2em #fff "content string");
 }
 
+
+///**********************************************************************************************************/
+// #                                                      
+// #                 o|    o                   o    o     
+// #  ,---.,---.,---..|--- .,---.,---.    ,-.-...  ,.,---.
+// #  |   ||   |`---.||    ||   ||   |    | | || >< ||   |
+// #  |---'`---'`---'``---'``---'`   '    ` ' '`'  ```   '
+// #  |                             
+// #   
+// #  usage:	.pos(a); 
+// #   
+///**********************************************************************************************************/
 .pos(@x){
 	.do(@x) when (@x = a), (@x = absolute){ @var:absolute; }
 	.do(@x) when (@x = f), (@x = fixed){ @var:fixed; }
@@ -161,12 +198,22 @@
 	.do(@x) when (@x = st), (@x = sticky){ @var:sticky; }
 	.do(@x);
 	position:@var;
-	//usage:	.pos(a);
 }
 
+
+///**********************************************************************************************************/
+// #                                               
+// #       |                            o    o     
+// #  ,---.|    ,---.,---.,---.    ,-.-...  ,.,---.
+// #  |   ||    ,---||    |---'    | | || >< ||   |
+// #  |---'`---'`---^`---'`---'    ` ' '`'  ```   '
+// #  |
+// #  
+// #  usage:	.place(1em 0 1em 0);
+// #  
+///**********************************************************************************************************/
 .place(@vars){
 	@index:length(@vars);
-
 	.place-loop(@index) when (@index > 0){
 		@turn:extract(@vars, @index);
 		.condition(@turn){
@@ -177,16 +224,27 @@
 			.do(@turn);
 		}
 		.condition(@turn);
-
 		.place-loop(@index - 1);
 	}
 	.place-loop(@index);
-	//usage:	.place(1em 0 1em 0);
 }
 
+
+///**********************************************************************************************************/
+// #                                                    
+// #  |                  |                   o    o     
+// #  |---.,---.,---.,---|,---.,---.    ,-.-...  ,.,---.
+// #  |   ||   ||    |   ||---'|        | | || >< ||   |
+// #  `---'`---'`    `---'`---'`        ` ' '`'  ```   '
+// #                                                  
+// #  usage:	.border(1px solid #ccc);
+// #			.border(1px 2px solid #ccc);
+// #			.border(1px 2px 3px solid #ccc);
+// #			.border(1px 2px 3px 4px solid #ccc);                                                
+// #
+///**********************************************************************************************************/
 .border(@vars){
 	@index:length(@vars);
-
 	.border-loop(@index) when (@index > 0){
 		@turn:extract(@vars, @index);
 		.condition(@turn){
@@ -197,19 +255,24 @@
 			.do(@turn);
 		}
 		.condition(@turn);
-
 		.border-loop(@index - 1);
 	}
 	.border-loop(@index);
-	//usage:	.border(1px solid #ccc);
-	//			.border(1px 2px solid #ccc);
-	//			.border(1px 2px 3px solid #ccc);
-	//			.border(1px 2px 3px 4px solid #ccc);
 }
 
+
+///**********************************************************************************************************/
+// #                                           
+// #                                o    o     
+// #  ,---..    ,,---.,---.    ,-.-...  ,.,---.
+// #  |   | \  / |---'|        | | || >< ||   |
+// #  `---'  `'  `---'`        ` ' '`'  ```   '
+// #
+// #  usage:	.over(v h s a d i xv xh xs xa xd xi yv yh ys ya yd yi touch auto);
+// #
+///**********************************************************************************************************/
 .over(@vars){
 	@index:length(@vars);
-
 	.over-loop(@index) when (@index > 0){
 		@turn:extract(@vars, @index);
 		.condition(@turn) when (@turn = v), (@turn = h), (@turn = s), (@turn = a), (@turn = d), (@turn = i){
@@ -248,13 +311,20 @@
 			.do(@turn);
 		}
 		.condition(@turn);
-
 		.over-loop(@index - 1);
 	}
 	.over-loop(@index);
-	//usage:	.over(v h s a d i xv xh xs xa xd xi yv yh ys ya yd yi touch auto);
 }
 
+
+///**********************************************************************************************************/
+// #                                                  
+// #          o         |                  o    o     
+// #  ,---,   .,---.,---|,---..  ,    ,-.-...  ,.,---.
+// #   .-' ---||   ||   ||---' ><     | | || >< ||   |
+// #  '---'   ``   '`---'`---''  `    ` ' '`'  ```   '
+// #         
+///**********************************************************************************************************/
 .z(@x){
 	z-index:@x;
 	//usage:	.z(1000)
@@ -263,7 +333,14 @@
 
 
 
-///****************************************************************************** ascii icons ***************/
+///**********************************************************************************************************/
+// #                                            
+// #                 oo    o                    
+// #  ,---.,---.,---...    .,---.,---.,---.,---.
+// #  ,---|`---.|    ||    ||    |   ||   |`---.
+// #  `---^`---'`---'``    ``---'`---'`   '`---'
+// #                                           
+///**********************************************************************************************************/
 .apple(){ &:before{ content:"F8FF"; } }
 .star(){ &:before{ content:"\2605"; } }
 .crossHair(){ &:before{ content:"\100CF"; } }			.crossHair2(){ &:before{ content:"\10122"; } }
@@ -300,12 +377,13 @@
 .cir-num17(){ &:before{ content:"\2470"; } }			.cir-num18(){ &:before{ content:"\2471"; } }
 .cir-num19(){ &:before{ content:"\2472"; } }			.cir-num20(){ &:before{ content:"\2473"; } }
 
-.double-cir-num01(){ &:before{ content:"\24F5"; } }	.double-cir-num02(){ &:before{ content:"\24F6"; } }
-.double-cir-num03(){ &:before{ content:"\24F7"; } }	.double-cir-num04(){ &:before{ content:"\24F8"; } }
-.double-cir-num05(){ &:before{ content:"\24F9"; } }	.double-cir-num06(){ &:before{ content:"\24Fa"; } }
-.double-cir-num07(){ &:before{ content:"\24Fb"; } }	.double-cir-num08(){ &:before{ content:"\24Fc"; } }
-.double-cir-num09(){ &:before{ content:"\24Fd"; } }	.double-cir-num10(){ &:before{ content:"\24Fe"; } }
-///************************************************************************** end ascii icons ***************/
+.double-cir-num01(){ &:before{ content:"\24F5"; } }		.double-cir-num02(){ &:before{ content:"\24F6"; } }
+.double-cir-num03(){ &:before{ content:"\24F7"; } }		.double-cir-num04(){ &:before{ content:"\24F8"; } }
+.double-cir-num05(){ &:before{ content:"\24F9"; } }		.double-cir-num06(){ &:before{ content:"\24Fa"; } }
+.double-cir-num07(){ &:before{ content:"\24Fb"; } }		.double-cir-num08(){ &:before{ content:"\24Fc"; } }
+.double-cir-num09(){ &:before{ content:"\24Fd"; } }		.double-cir-num10(){ &:before{ content:"\24Fe"; } }
+
+
 
 
 ///************************************************************************** common mixins() ***************/
@@ -426,18 +504,11 @@
 			};
 			.do(@turn);
 		}
-
 		.condition(@turn);
 		.bg-loop(@index - 1);
 	}
 	.bg-loop(@index);
 }
-
-
-
-
-
-
 
 
 ///**********************************************************************************************************/
@@ -446,23 +517,23 @@
 // #  `---.| .-' |---'    | | || >< ||   |
 // #  `---'`'---'`---'    ` ' '`'  ```   '
 // #
-// #  usage:		.sizeTest1{ .size2(1em right); }
-// #				.sizeTest2{ .size(1em 2em left); }
+// #  usage:		.sizeTest1{ .size2(1em r); }
+// #				.sizeTest2{ .size(1em 2em l); }
 // #				.sizeTest3{ .size(1em 2em 3em); }
 // #				.sizeTest4{ .size(1em 2em 3em 4em); }
 // #				.sizeTest5{ .size(1em 2em 3em 4em 5em); }
 // #				.sizeTest6{ .size(1em 2em 3em 4em 5em 6em); }
-// #				.sizeTest7{ .size(1em 2em 3em 4em 5em 6em right); }
+// #				.sizeTest7{ .size(1em 2em 3em 4em 5em 6em r); }
 // #				.sizeTest8{ .size(n 2em); }
 // #				.sizeTest9{ .size(n 2em n); }
 // #				.sizeTest10{ .size(n 2em n 4em); }
 // #				.sizeTest11{ .size(n 2em n 4em n); }
 // #				.sizeTest12{ .size(n 2em n 4em n 6em); }
-// #				.sizeTest13{ .size(n 2em n 4em n 6em right); }
-// #				.sizeTest13{ .size(w 2em maxw 4em minh 6em right); }
-// #				.sizeTest13{ .size(h 2em right w 4em maxw 6em); }
+// #				.sizeTest13{ .size(n 2em n 4em n 6em r); }
+// #				.sizeTest13{ .size(w 2em maxw 4em minh 6em r); }
+// #				.sizeTest13{ .size(h 2em r w 4em maxw 6em); }
 // #				.sizeTest13{ .size(minh 2em clear h 4em maxh 6em); }
-// #				.sizeTest13{ .size(left maxw 2em w 4em minw 6em); }
+// #				.sizeTest13{ .size(l maxw 2em w 4em minw 6em); }
 ///**********************************************************************************************************/
 .size(@vars){
 	@index:length(@vars);
@@ -471,16 +542,6 @@
 	.size-loop(@index) when (@index > 0){
 		@turn:extract(@vars, @index);
 		@turn1:extract(@vars, @index + 1);
-
-		.condition(@turn) when (@contains = false) and not (iskeyword(@turn)){
-			.do(@turn) when (@index = 1){ width:@turn; }
-			.do(@turn) when (@index = 2){ height:@turn; }
-			.do(@turn) when (@index = 3){ min-width:@turn; }
-			.do(@turn) when (@index = 4){ min-height:@turn; }
-			.do(@turn) when (@index = 5){ max-width:@turn; }
-			.do(@turn) when (@index = 6){ max-height:@turn; }
-			.do(@turn);
-		}
 		.condition(@turn) when (@contains = true){
 			.do(@turn) when (@turn = w){ width:@turn1; }
 			.do(@turn) when (@turn = h){ height:@turn1; }
@@ -491,16 +552,29 @@
 			.do(@turn);
 		}
 		.condition(@turn){
-			.do(@turn) when (@turn = l), (@turn = left){ float:left; }
-			.do(@turn) when (@turn = r), (@turn = right){ float:right; }
+			.do(@turn) when (@turn = l){ float:left; }
+			.do(@turn) when (@turn = r){ float:right; }
+			.do(@turn) when (@turn = no), (@turn = none){ float:none; }
 			.do(@turn) when (@turn = c), (@turn = clear){ clear:both; }
+			.do(@turn) when (@turn = center){ margin:0 auto; }
 			.do(@turn);
+		}
+		.condition(@turn) when (isunit(@turn, px)), (isunit(@turn, rem)), (isunit(@turn, "%")), (isunit(@turn, em)), (isunit(@turn, pt)){
+			.run(@turn) when (@contains = false){
+				.do(@turn) when (@index = 1){ width:@turn; }
+				.do(@turn) when (@index = 2){ height:@turn; }
+				.do(@turn) when (@index = 3){ min-width:@turn; }
+				.do(@turn) when (@index = 4){ min-height:@turn; }
+				.do(@turn) when (@index = 5){ max-width:@turn; }
+				.do(@turn) when (@index = 6){ max-height:@turn; }
+				.do(@turn);
+			}
+			.run(@turn);
 		}
 		.condition(@turn);
 		.size-loop(@index - 1);
 	}
 	.size-loop(@index);
-	//usage:	.size(.5em .6em .2em .3em 1em 2em r l);
 }
 
 
@@ -518,7 +592,6 @@
 // #				.myTest{ .grid(4, 10% 20% 30% 40%); }
 // #				.myTest{ .grid(4, 10% 20% 30% 40%, 10%); } "LessMinded with assume 100% and scale widths to adjust for margins"
 ///**********************************************************************************************************/
-
 .grid(@columns, @scale:even, @gap:none, @padd:0%, @html5:no){
 	.clearfix();
 	@vars:~`"@arguments"`;
@@ -533,7 +606,6 @@
 			}
 			.grid-loop(@columns);
 		}
-
 		.do(@vars) when (@scale = even) and not (@gap = none){
 			.when(@vars) when (@columns = 2){
 				@margin:(unit(@gap) / 100) / @columns;
@@ -547,7 +619,6 @@
 				}
 				.grid-loop(@columns);
 			}
-
 			.when(@vars) when (@columns > 2){
 				@margin:(unit(@gap) / 100);
 				@marginTotal:@margin * (@columns - 1);
@@ -564,7 +635,6 @@
 			}
 			.when(@vars);
 		}
-
 		.do(@vars) when (length(@scale) > 1) and (@gap = none){
 			.grid-loop(@i) when (@i > 0){
 				@temp:extract(@scale, @i);
@@ -573,11 +643,9 @@
 			}
 			.grid-loop(@columns);
 		}
-
 		.do(@vars) when (length(@scale) > 1) and not (@gap = none){
 			@margin:(unit(@gap) / 100) / length(@scale);
 			@mar:(@margin / @columns);
-
 			.when(@vars){
 				.grid-loop(@i) when (@i > 0){
 					@width:(unit(extract(@scale, @i)) / 100);
@@ -595,24 +663,30 @@
 	}
 	.condition(@vars);
 }
+
+
 ///**********************************************************************************************************/
-
-
-
+// #
+// #  |    o|    |         |    o                   o    o     
+// #  |--- .|--- |    ,---.|    .,---.,---.    ,-.-...  ,.,---.
+// #  |    ||    |    |---'|    ||   ||---'    | | || >< ||   |
+// #  `---'``---'`---'`---'`---'``   '`---'    ` ' '`'  ```   '
+// #
+// #  usage:	.titleLine(15px, #ccc, #fff);
+// #			.titleLine(15px, #ccc, #fff, 15%);
+// #			.titleLine(15px, #ccc, #fff, 15%, 1px);
+// #			.titleLine(15px, #ccc, #fff, 15%, 1px, dashed);
+// #
+///**********************************************************************************************************/
 .titleLine(@fontsize, @text, @bgcolor, @width:15%, @thickness:1px, @pattern:solid){
 	@split:(@width/3);
 	@left:percentage((unit(@width+@split)*-1)/100);
 	@right:@split;
 
 	.txt(c @fontsize); .dis(b); .bg(@bgcolor); color:@text;
-
 	&:before, &:after{ border:@thickness @pattern @text; .pos(a); .size(@width); margin-top:unit(@fontsize/2, px); content:" "; }
 	&:before{ margin-left:@left;  }
 	&:after{ margin-left:@right; }
-	//usage:	.titleLine(15px, #ccc, #fff);
-	//			.titleLine(15px, #ccc, #fff, 15%);
-	//			.titleLine(15px, #ccc, #fff, 15%, 1px);
-	//			.titleLine(15px, #ccc, #fff, 15%, 1px, dashed);
 }
 
 .select(@color, @bg:none){
@@ -656,7 +730,7 @@
 }
 
 .border-radius(@vars){
-	.property(border-radius, ~'@{vars}', ~'webkit');
+	.property(border-radius, ~'@{vars}', ~'webkit moz');
 	background-clip:padding-box;
 	//requires:	.property()
 	//usage:	.border-radius(25px 25px 25px 25px);
@@ -684,13 +758,12 @@
 	@iefactor:@factor*100;
 	zoom:1;
 	filter:~"alpha(opacity=(@{iefactor}))";
-	opacity:@factor;
-	-moz-opacity:@factor;
+	.property(opacity, ~"@{factor}", ~"webkit moz");
 	//usage:	.opacity(.5);
 }
 
 .nav(){ list-style-type:none; padding:0; margin:0; overflow:hidden;
-	> li{ .dis(b); .size(left); .select-none();
+	> li{ .dis(b); .size(l); .select-none();
 		&:last-child{ margin-right:0;
 		}
 	}
@@ -944,6 +1017,5 @@ transform-origin:@origin;
 		}
 	}
 }
-
 ///**********************************************************************************************************/
 
