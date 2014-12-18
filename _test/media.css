@@ -1,0 +1,360 @@
+/* LESS Document mcoleman(3/10/14)*/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 479px) {
+  body {
+    content: "smart phone";
+  }
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 351px) and (max-width: 479px) {
+  body {
+    content: "smart phone - land";
+  }
+  body > .wrapper,
+  body > .winSlide,
+  body > [data-slider*="Slider"] {
+    font-size: 0.8em;
+  }
+  .headerBar {
+    font-size: 0.7em;
+  }
+  .pdpTabs.tabs {
+    font-size: 0.8em;
+  }
+  .gridWrap .error {
+    font-size: 0.7em;
+  }
+  .gridWrap h3 {
+    font-size: 1em;
+  }
+  .navSlider .searchText {
+    font-size: 1em;
+  }
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+  body {
+    content: "smart phone - land 2";
+  }
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 351px) and (max-width: 370px) {
+  body {
+    content: "smart phone - land 3";
+  }
+}
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 350px) {
+  body {
+    content: "smart phone - port";
+    font-size: 0.9em;
+  }
+  h1 {
+    font-size: 1.4em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  h4 {
+    font-size: 0.9em;
+  }
+  h5 {
+    font-size: 0.8em;
+  }
+  h6 {
+    font-size: 0.7em;
+  }
+  body > .wrapper,
+  body > .winSlide,
+  body > [data-slider*="Slider"] {
+    font-size: 0.9em;
+  }
+  body.rtgKids img.rtgLogo {
+    height: 2.5em;
+    margin: .3em auto;
+  }
+  body.rtgAdults img.rtgLogo {
+    height: 2.5em;
+    margin: .3em auto;
+  }
+  .rtgCheckout .headerBar .rtgLogo,
+  .checkoutMyAccount .headerBar .rtgLogo {
+    margin: .3em .5em !important;
+  }
+  div.headerBar {
+    /* nav menu text*/
+  }
+  div.headerBar .navIco {
+    height: 2.5em;
+    width: 3em;
+    margin-top: 0;
+  }
+  div.headerBar .navIco div,
+  div.headerBar .navIco span {
+    font-size: 0.6em;
+  }
+  div.headerBar .navIco span {
+    bottom: -0.5em;
+  }
+  div.headerBar #cartOpen {
+    background-size: 60% auto;
+  }
+  div.headerBar #searchOpen {
+    background-size: 50% auto;
+  }
+  /*end headerBar*/
+  div.navSlider .searchBox {
+    font-size: 0.8em;
+  }
+  div.navSlider .searchSubmit {
+    font-size: 0.8em;
+  }
+  div.navStatic p {
+    font-size: 0.7em;
+    padding: 0 .5em;
+  }
+  /*grid commons*/
+  div.gridWrap .error {
+    font-size: 0.7em;
+  }
+  div.gridWrap h3 {
+    font-size: 0.9em;
+    margin: 0;
+  }
+  div.gridWrap .productWrap {
+    margin-top: 1%;
+  }
+  div.gridWrap .gridPiece {
+    margin-bottom: 0.2em;
+  }
+  div.gridWrap .gridCost {
+    font-size: 1.4em;
+    margin-bottom: 0;
+  }
+  /*end grid commons*/
+  /*product page grid*/
+  div.numberOfProducts {
+    font-size: 0.7em;
+  }
+  div.paginationTop a,
+  div.paginationBottom a {
+    font-size: 0.9em;
+  }
+  div.paginationBottom {
+    margin-top: 1em;
+  }
+  /*end product grid*/
+  .pdpPage .productHeader h1 {
+    font-size: 1em;
+  }
+  .pdpPage .pdpSliders .fakeInput {
+    font-size: 0.8em;
+  }
+  .addOnesWrap {
+    font-size: 0.8em;
+  }
+  .pdpTabs.tabs {
+    font-size: 0.8em;
+  }
+  .pdpPanes.panes {
+    font-size: 0.8em;
+  }
+  .winSlide > .foldUp:after {
+    font-size: 0.7em;
+  }
+  .winSlide > .foldUp {
+    background-size: 80% 90%;
+    padding-bottom: 0.5em;
+  }
+  .configHeader {
+    font-size: 0.9em;
+  }
+  .fullWish .quantity .qtyText,
+  .miniWish .quantity .qtyText {
+    font-size: 0.7em !important;
+  }
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body {
+    content: "iPad";
+  }
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  body {
+    content: "iPads - land";
+  }
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  body {
+    content: "iPads - port";
+  }
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  body {
+    content: "desk / lap";
+  }
+}
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  body {
+    content: "large screens";
+  }
+}
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  body {
+    content: "iphone4";
+  }
+  .pdpPage label.addOnCheckbox {
+    font-size: 0.7em;
+  }
+}
+/* iPhone 4 landscape ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) and (orientation: landscape) {
+  body {
+    content: "iphone4 land";
+  }
+}
+/* iPhone 4 retina  */
+@media (device-height: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  body {
+    content: "iphone4 ret port";
+  }
+}
+/* iPhone 4 retina landscape */
+@media (device-height: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  body {
+    content: "iphone4 ret land";
+    font-size: 0.7em;
+  }
+  div.gridWrap.navIcons {
+    font-size: 0.7em;
+  }
+  #locationBar > p {
+    font-size: 0.7em;
+  }
+  div.window {
+    font-size: 0.8em;
+  }
+}
+/* iPhone 5 ----------- */
+@media screen and (device-aspect-ratio: 40/71) {
+  body {
+    content: "iphone5 port";
+    font-size: 0.9em;
+  }
+  body h1 {
+    font-size: 1.3em;
+  }
+  body h2 {
+    font-size: 1.2em;
+  }
+  body h3 {
+    font-size: 1.1em;
+  }
+  body h4 {
+    font-size: 1em;
+  }
+  body h5 {
+    font-size: 0.9em;
+  }
+  body h6 {
+    font-size: 0.8em;
+  }
+  input[type="text"],
+  input[type="password"],
+  textarea {
+    position: relative;
+    z-index: -1;
+  }
+  .filterWrap .facetHeader {
+    width: 20%;
+  }
+  div.paginationTop a,
+  div.paginationBottom a {
+    font-size: 1em;
+  }
+  div.storesWrap p {
+    line-height: 1.4em;
+  }
+  html[data-useragent*="iPhone OS 10_9_5"] .menuOverlay {
+    width: 21%;
+  }
+}
+/* iPhone 5 landscape ----------- */
+@media screen and (device-aspect-ratio: 40/71) and (orientation: landscape) {
+  body {
+    content: "iphone5 landscape";
+  }
+  div.headerBar {
+    height: 3.5em;
+  }
+  div.headerBar img.rtgLogo {
+    height: 2.5em;
+  }
+  div.headerBar div.navIco {
+    height: 3.5em;
+  }
+  div.headerBar div#navOpen,
+  div.headerBar div#searchOpen {
+    background-size: 45% auto;
+  }
+  div.headerBar div#cartOpen {
+    background-size: 50% auto;
+  }
+  div.headerBar div#storeOpen {
+    background-size: 35% auto;
+  }
+  div#locationBar > p {
+    font-size: 0.4em;
+  }
+}
+@media screen and (device-width: 360px) and (device-height: 640px) and (orientation: portrait) {
+  body {
+    content: "galaxy S - port";
+  }
+}
+@media only screen and (device-width: 640px) and (device-height: 360px) and (orientation: landscape) {
+  body {
+    content: "galaxy S - land";
+  }
+}
+@media only screen and (min-width: 360px) and (max-width: 360px), only screen and (min-device-width: 360px) and (max-device-width: 360px) and (min-height: 640px) and (max-height: 640px), only screen and (min-device-height: 640px) and (max-device-height: 640px) and (orientation: portrait) {
+  body {
+    content: "galaxy S - port";
+  }
+}
+@media only screen and (min-width: 640px) and (max-width: 640px), only screen and (min-device-width: 640px) and (max-device-width: 640px) and (min-height: 360px) and (max-height: 360px), only screen and (min-device-height: 360px) and (max-device-height: 360px) and (orientation: landscape) {
+  body {
+    content: "galaxy S - land";
+  }
+  div.headerBar {
+    height: 3.5em;
+  }
+  div.headerBar img.rtgLogo {
+    height: 2.5em;
+  }
+  div.headerBar div.navIco {
+    height: 3.5em;
+  }
+  div.headerBar div#navOpen,
+  div.headerBar div#searchOpen {
+    background-size: 45% auto;
+  }
+  div.headerBar div#cartOpen {
+    background-size: 50% auto;
+  }
+  div.headerBar div#storeOpen {
+    background-size: 35% auto;
+  }
+  div#locationBar > p {
+    font-size: 0.8em;
+  }
+}

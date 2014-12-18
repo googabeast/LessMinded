@@ -1,0 +1,180 @@
+/* LESS Document schery(6/30/14)*/
+@import (reference) "common.less";
+
+.noMove{ .over(h yh xh); .size(100% 100%); }
+
+.rtgCheckout{
+	div.wrapper{
+		.window{ .dis(b); }
+	}
+	label{ .txt(@grey8 1.1em); }
+
+	div.selector{ .txt(lh 3.1em); .size(n 3.2em); }
+
+	.paginationTop{ margin:0;
+		h1{ .txt(@white 1.3em); margin-top:0; }
+		a[href]{ padding:0 0 .8em 0; }
+	}
+	.content h2{ .bg(@grey8); .txt(@white); padding:0.5em; }
+	.content h3{ .bg(@grey2); .txt(@black); padding:0.5em; margin:0; }
+	.contentWrap{ margin:0 1em; }
+
+	.checkBoxAgreeText{ .size(lh 1.3em); }
+
+	.shippingOptionsChecklist{ padding:1em 0; 
+		.dateList{ 
+			.inputWrap{ margin:.6em 0; }
+			label{ margin:0; }
+		}
+	}
+	.deliveryTypeTitle{ .txt(b); }
+
+	.moreLessDates, .changeAddress{ padding:0 3em;
+		a{ .txt(@blue); }
+	}
+
+	.gridWrap{
+		.smallGap{ .size(48%); margin-left:2%; }
+		.padded{ padding:0 0.5em; }
+
+		.col1t3{ margin-left:0; }
+		.col2t3{ margin-right:0; margin-left:3%; }
+		span.required{ .txt(@red); .size(l); }
+
+		.content{ margin:1em 0;
+			ul{ .bg(@grey1); padding:0.5em;
+				li{ padding:0.2em 0.5em 0.2em 1.5em; list-style:disc inside; text-indent:-1em; margin:0; }
+			}
+			p{ .bg(@grey1); padding:0.5em 1em; }
+		}
+	}
+	& .inputWrap{ margin:1em 0 1.3em 0; padding:0 1em;
+		.inputWrap{ padding:0; }
+		& label{ .dis(ib); .txt(.9em b); margin:0.3em 0; padding:0;
+			&.required:before{ .txt(@red "*"); padding-right:0.5em; }
+		}
+		&.formError, .formError{
+			label{ .txt(@red); }
+			input, .selector{
+				border:1px solid @red; .bg(fade(@red, 10%));
+				.bg(url("@{svg}error2.svg") no size 16px auto pos 97% center);
+			}
+			.errorLabel{ .txt(@red); margin:0.5em 0; }
+		}
+		&.formValid, .formValid{
+			label{ .txt(@black); }
+			input, .selector{ .bg(@white none); border:1px solid @black; }
+		}
+	}
+	& .deliverySchedule{
+		& .deliveryInfo{
+			& img{ .size(5em); margin:-.5em 1em 0 1em; }
+			& p{ margin-top:1em; }
+		}
+		.content{
+			.required{ .size(none); }
+		}
+		#standardDelivery{ margin-top:0; }
+		.radioWrap{ padding:0.2em 0em;
+			&.not-active{ .dis(n); }
+		}
+		.deliveryNotes{
+			.agreeDeliveryTerms{ margin:3%;
+				.col1t3{ .size(10%); }
+				.col2t3{ .size(87%); }
+				.checker{ .pos(a); margin-right:1%; }
+				.deliveryAgree{ .dis(ib); .size(85%); text-indent:0; vertical-align:top; }
+			}
+		}
+		.shipUsps, .shipVendor{
+			ul{ padding:0 2em;
+				li{ margin:1em 0; list-style:none;
+					span{ .dis(b);
+						&.item{ .txt(b); }
+					}
+				}
+			}
+		}
+	}
+	.checkoutTotal{
+		ul{ margin:1em 2em; border:1px solid @grey2; border-radius:10px; padding:0 0 .7em 0;
+			li{ .txt(transparent); padding:0.2em 1.5em; list-style:inherit; margin-bottom:0;
+				&:first-of-type{ .txt(b); .bg(@grey1); padding:0.5em 1.5em; border-bottom:1px solid @grey2; }
+				span.title{ .size(l); }
+				span{ .size(r); .txt(@black); }
+			}
+		}
+	}
+	#creditCardForm{
+		.col1t3{ .size(71%); margin-left:0%; }
+		.col2t3{ .size(auto); padding:0.1em 0; margin-right:0; }
+		.billingCopy p{ .txt(lh 1.3em); }
+	}
+	.creditCardtype{
+		div{ background-position:center center; background-repeat:no-repeat; .size(3em 2.2em); margin: 0.5em 0;
+			&.visa{ .bg(url("@{img}checkout/visa.svg")); }
+			&.amex{ .bg(url("@{img}checkout/americanexpress.svg")); }
+			&.mastercard{ .bg(url("@{img}checkout/mastercard.svg")); }
+			&.discover{ .bg(url("@{img}checkout/discover.svg");) }
+		}
+	}
+	.rtgCreditInformationContainer{
+		h4{ .txt(.9em b @grey7); }
+		p{ .txt(@grey7 lh 1.2em); }
+	}
+	.delInfoMiniCalImage{ .size(60px 100px l); margin-left:0.5em; padding:0.5em 0;
+		img{ .size(h auto mw 40px); }
+	}
+	.deliveryRules{
+		.changeYourDelDate{ .size(r); }
+	}
+	.miniCartText{
+		.miniCartProductImage{ .size(mw 75%); margin:0 15%; }
+		.productInfo a{ .txt(n no @black); }
+	}
+
+	.load_blocker{ .pos(f); .place(0 n n 0); .z(9999) !important; .bg(@black); .dis(b); .size(100% 100%); .opacity(.7);
+		.ajax-spinner-bars{ .pos(a); .size(1em 1em); .place(50% n n 50%); }
+		.ajax-spinner-bars > div{ .pos(a); .size(2px 10px); .bg(@white); .opacity(.05);
+		  -webkit-animation:fadeit 0.8s linear infinite;
+				  animation:fadeit 0.8s linear infinite;
+		}
+		@index:16;
+		.mixin-loop(@index) when (@index > 0){
+			.do(@index) when (@index = 1){
+				@deg:0;
+				@sec:0.05;
+			}
+			.do(@index) when not (@index = 1){
+				@deg:(22.5 * (@index - 1));
+				@sec:round(0.05 + (0.05 * (@index - 1)), 2);
+			}
+			.do(@index);
+			.ajax-spinner-bars > .bar-@{index}{
+				.property(transform, rotate(~"@{deg}deg") translate(0, -12px), ~"webkit ms") !important;
+				.property(animation-delay, ~"@{sec}s", ~"webkit") !important;
+			}
+			.mixin-loop(@index - 1);
+		}
+		.mixin-loop(@index);
+
+		@-webkit-keyframes fadeit{
+			0%{ .opacity(1); }
+			100%{ .opacity(0);}
+		}
+		@keyframes fadeit{
+			0%{ .opacity(1); }
+			100%{ .opacity(0);}
+		}
+	}
+
+	.shippingAddressUpdate{ .size(r); }
+	.confirmationContainer{ .txt(c); margin:2em 1em;
+		& input{ .size(80%); }
+	}
+	.billingConfirmationBlock{
+		& [class*="pg_"]{ margin:0.5em 0; }
+	}
+
+}
+
